@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport helps the browser to determine what the width of the viewport should be
+    - If viewport meta tag is not added, the website in mobile view looks like it is zoomed out version of desktop view
+    - When we add viewport, then the width is scaled according to device Refer readme  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <header id="main-header">
+        <h1>CSS Variables</h1>
+        <button onclick="changeColor()">Click To Change Color</button>
+    </header>
+    <div class="container">
+        <div class="grid">
+            <div class="box">
+                <h1>Hello World 1</h1>
+                <p>This is a test parah 1. You are going to learn CSS variables and some anout of grid as well</p>
+            </div>
+            <div class="box">
+                <h1>Hello World 2</h1>
+                <p>This is a test parah 2. You are going to learn CSS variables and some anout of grid as well</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- Accessing css variables -->
+<script>
+    const box = document.querySelector('.box');
+    const boxStyles = getComputedStyle(box)
+    const boxMainColor = boxStyles.getPropertyValue('--box-main-color')
+    console.log(boxMainColor)
+
+    function changeColor() {
+        const header = document.querySelector('#main-header')        
+        header.style.setProperty('--header-bg-color', '#333')
+    }
+
+</script>
+</html>
