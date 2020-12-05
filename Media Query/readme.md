@@ -3,8 +3,8 @@
 
 Without viewport
 
-![IMAGES](/without viewport.png "Without viewport")
+![IMAGES](/withoutviewport.png "Without viewport")
 
 With viewport
 
-![IMAGES](/with viewport.png "With viewport")
+![IMAGES](/withviewport.png "With viewport")
