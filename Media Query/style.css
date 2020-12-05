@@ -24,9 +24,28 @@ body {
 }
 
 #main-header {
+    --header-font-size : 50px
+}
+
+#main-header {
     background-color: var(--header-bg-color);
     color: var(--header-text-color);
+    text-align: center;    
+}
+
+
+#main-header h1 {
+    font-size: var(--header-font-size);
+    display: flex;
+    width: 100px;
+}
+
+#main-header button {
+    font-size: 30px;
+    width: 300px;
+    height: 100px;
     text-align: center;
+    margin-left: 150px;    
 }
 
 .grid {
@@ -45,6 +64,8 @@ body {
     --box-shadow-h-offset : 10px;
     --box-shadow-v-offset : 10px;
     --box-shadow-blur : 50px;
+    --box-h1-font : 30px;
+    --box-p-font : 20px
 }
 
 .box {
@@ -66,4 +87,110 @@ body {
     --box-main-color : #6c117c; /* Overriding css variable */
     color: var(--box-main-color);
     font-size: var(--box-font, 30px);   /* Fall back value if the variable doesnot exists */
+}
+
+.box p {
+    font-size: var(--box-p-font);
+}
+
+/* This means that untill the viewport width changes to < 1000, keep the following styles 
+    - These styles are applied until viewport width is >= 1000px */
+@media screen and (min-width: 1000px) {
+    .box {
+        --box-font : 40px;
+        --box-p-font : 25px
+    }
+    #main-header {
+        padding-left: 150px;
+        padding-right: 150px;
+        --header-font-size : 50px
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .box {
+        --box-font : 30px;
+        --box-p-font : 20px
+    }
+    #main-header {
+        padding-left: 150px;
+        padding-right: 150px;
+        --header-font-size : 40px;            
+    }
+
+    #main-header button {
+        font-size: 20px;
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        margin-left: 100px;    
+    }
+}
+
+/* This means that untill the viewport width changes to > 800, keep the following styles 
+    - These styles are applied until viewport width is <= 800px */
+@media screen and (max-width: 800px) {
+    .box {
+        --box-font : 20px;
+        --box-p-font : 10px
+    }
+    #main-header {
+        padding-left: 100px;
+        padding-right: 100px;
+        --header-font-size : 30px
+    }
+
+    #main-header button {
+        font-size: 10px;
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        margin-left: 80px;    
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    #main-header h1{
+        display: flex;
+        text-align: center;
+    }
+    .grid {
+        display: block;
+        align-items: center;
+        text-align: center;
+    }
+
+
+    #main-header button {
+        font-size: 10px;
+        width: 80px;
+        height: 40px;
+        text-align: center;
+        margin-left: 0;    
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .box {
+        --box-font : 10px;
+        --box-p-font : 7px
+    }
+    #main-header {
+        --header-font-size : 20px
+    }
+
+    #main-header h1 br {
+        
+    }
+}
+
+@media screen and (max-width: 250px) {
+    .box {
+        --box-font : 8px;
+        --box-p-font : 5px
+    }
+    #main-header {
+        --header-font-size : 10px
+    }
 }
