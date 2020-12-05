@@ -1,0 +1,69 @@
+/* Define variable for the root */
+:root {
+    --main-bg-color : #f4f4f4;
+    --main-text-color : rgb(68, 14, 14);
+    --main-font-family : Arial, Helvetica, sans-serif;
+    --main-line-height : 1.5;
+    --container-width : 90%;
+    --header-bg-color : #097777;
+    --header-text-color : rgb(255, 255, 255);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: var(--main-line-height);
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-family: var(--main-font-family);
+}
+
+.container {
+    width: var(--container-width);
+    margin: 20px auto;
+}
+
+#main-header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    align-items: center;
+}
+/* Define box vars : Applies to anything in the box */
+
+.box {
+    --box-bg-color : #c7c5c0;
+    --box-main-color : #b30d31;
+    --box-shadow-color : #be4d65;
+    --box-padding : 15px 30px;    
+    --box-shadow-h-offset : 10px;
+    --box-shadow-v-offset : 10px;
+    --box-shadow-blur : 50px;
+}
+
+.box {
+    background-color: var(--box-bg-color);
+    padding: var(--box-padding);
+    margin: var(--box-margin);
+    border: 1px solid var(--box-main-color);
+    box-shadow: var(--box-shadow-h-offset) var(--box-shadow-v-offset) var(--box-shadow-blur) var(--box-shadow-color);
+
+    /* Calc function */
+    /* --gap : 10;      This wont work in css inlike in sass. So we nee to use sass
+    grid-gap: var(--gap)px; */
+
+    --gap : 10;
+    grid-gap: calc(var(--gap) * 1px);
+}
+
+.box h1 {
+    --box-main-color : #6c117c; /* Overriding css variable */
+    color: var(--box-main-color);
+    font-size: var(--box-font, 30px);   /* Fall back value if the variable doesnot exists */
+}
