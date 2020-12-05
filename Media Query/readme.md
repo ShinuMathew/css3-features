@@ -3,8 +3,8 @@
 
 Without viewport
 
-![Without viewport](/https://www.w3schools.com/css/img_viewport1.png "Without viewport")
+![Without viewport](https://www.w3schools.com/css/img_viewport1.png "Without viewport")
 
 With viewport
 
-![With viewport](/https://www.w3schools.com/css/img_viewport2.png "With viewport")
+![With viewport](https://www.w3schools.com/css/img_viewport2.png "With viewport")
