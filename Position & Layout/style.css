@@ -1,0 +1,121 @@
+/* Positions */
+/*header {
+    font-family: 'Germania One', cursive;
+    position: relative;
+    top: 200px; /* shift 200px awat from top
+    left:150px; /* shift 150px awat from left
+    color: #f7edbb;
+    font-size: 30px;
+} */
+
+body {
+    display: block;
+    margin: 0;
+}
+
+header {
+    font-family: 'Germania One', cursive;
+    color: #ef932a77;
+    font-size: 40px;    
+    background-color: #414d4118;
+    text-align: center;
+    position: fixed; 
+    width : 100%;
+    z-index : 1;/* z-index is used to bring elements forward when we give it +ve value >0*/
+}
+
+header h1 {
+    margin: 15px !important;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 5px solid #101110;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 60px;
+}
+
+.banner h2 br {
+    display: none;
+}
+
+.banner h2 span {
+    font-size: 1.2em;
+}
+
+/* Absolute */
+.banner {
+    position: relative;
+}
+
+.banner .welcome {
+    font-family: 'Germania One', cursive;
+    color: #f7edbb;
+    font-size: 70px;
+    position: absolute; /* When we position something absolutely, 
+                            we take it out of normal document flow 
+                            and we loose its original space unlike relative position*/
+    bottom: 2%;
+    left: 2%;
+    background-color: #414d4169;
+    border-radius: 10%;
+}
+
+nav {
+    background-color: #f4f4f4;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+    top: 155px;
+}
+/* How to wrap navigation links in one line */
+nav li {
+    width:25%;
+    display: inline-block;
+    font-size: 24px;
+}
+
+nav ul {
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* ----------------------------------------- */
+
+nav ul li {
+    padding: 20px;
+}
+nav li a {
+    text-decoration: none;
+    color: #221d04;
+}
+
+nav li a.join{
+    text-decoration: none;
+    color: #860b0b;
+}
+
+nav li:hover{
+    color: #362e06;
+    background-color: rgb(238, 224, 184);
+}
+
+main {
+    max-width: 100%;
+    width: 1200px;
+    margin: 40px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+article h2 {
+    color: #df2d2de3;
+    font-size: 48px;    
+    margin: 0 !important;
+}
+
+article p { 
+    line-height: 2em;
+    font-size: 20px;
+    color: #4b4b4b;
+}
