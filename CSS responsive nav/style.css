@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --nav-content-color : rgb(243, 237, 201); 
+    --nav-background-color-temp : #5d4954:
+    --default-font : 'Poppins', sans-serif
+    /* background-color: #5d4954; */
+}
+
+.body-space {
+    --default-font : 'Poppins', sans-serif;
+    --default-color : rgb(243, 237, 201); 
+    --default-background-color : #5d495465;
+    background-image: url(bg-img.jpg);
+    min-height: 100vh;
+}
+
+nav {
+    --nav-background-color : #5d495465;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: var(--nav-background-color);
+    font-family: var(--default-font);
+    z-index: 20;
+}
+
+.content {
+    z-index: 20;
+    font-family: var(--default-font);
+    color: var(--default-color);
+    position : absolute;
+    top : 50%;
+    left :25%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.btn {
+    background-color: var(--default-background-color);
+    width: 250px;
+    height: 60px;
+    border-radius: 40px;
+    border: white;
+    box-shadow: 0px 0px;
+    cursor: pointer;
+    font-size: large;
+    font: var(--default-font);
+    letter-spacing: 3px;
+    color: var(--default-color);
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    color: black;
+    transition: 0.8s;
+}
+
+.logo {
+    color: var(--nav-content-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;    
+}
+
+.logo h4 {
+    font-weight: bolder;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--nav-content-color);
+    letter-spacing: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+/* ------------------- Responsiver hamburger ------------------- */
+
+.burger {
+    display: none;
+}
+
+.burger div{
+    width: 25px;
+    height: 3px;
+    background-color: var(--nav-content-color);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width:1024px) {
+    .nav-links {
+        width: 25em;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .burger {
+        display: block;
+        justify-content: right;
+        cursor: pointer;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-links {
+        /* display: none;  - If you want to remove it*/
+        /* For moving it below the nav bar:  */
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        width: 60%;
+        top: 8vh;
+        background-color: var(--nav-background-color);
+        display: block;
+        /* Better way to bring it as a column */
+        /* display: flex;
+        flex-direction: column;
+        width: 50%; */
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        margin: 60px;
+        text-align: center;     
+        opacity: 0;   
+    }
+
+    .nav-links a {
+        font-size: larger;
+    }
+
+    .logo {
+        color: var(--nav-content-color);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 20px;    
+    }
+
+    .logo h4 {
+        font-weight: bolder;
+        text-align: center;
+    }
+
+    .content {       
+        font-size: 15px;   
+        left :5%;     
+    }
+    
+    .btn {        
+        width: 200px;
+        height: 40px;
+        margin: 10px;        
+    }
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
