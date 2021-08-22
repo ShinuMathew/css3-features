@@ -1,0 +1,28 @@
+body {
+    background: #333;
+}
+
+.box {
+    background: white;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    top: 200px;
+    transition-property: all; /* TO TRIGGER ALL THE TRANSITION PROPERTIES */
+    /* transition-property: background, border-radius, transform; */
+    transition-duration: 1s, 2s;
+    transition-delay: 0.5s;
+    transition-timing-function: ease-in;
+}
+
+.box:hover {
+    background: rgb(165, 70, 70);
+    border-radius: 50%;
+    transform: rotateY(180deg);
+}
+
+/* :active is onclick and hold */
+.box:active { 
+    background: rgb(38, 0, 255);
+}

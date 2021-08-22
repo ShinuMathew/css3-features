@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: lightblue;
+    text-align: center;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    /* padding: 20px; */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+/* img { */
+
+    /* X-axis : Across width
+    Y-axis : Across height */
+
+
+    /* translate : Move the element */
+    /* Shifts the element 200px to right */
+    /* transform: translateX(200px) ;    */
+    /* Shifts the element 200px to down  */
+    /* transform: translateY(200px);    */
+    /* Shifts the element 200px to right */
+    /* transform: translateZ(20px);    */
+
+    /* OR */
+    /* transform: translate(100px, 200px); */
+
+    /* scale : >1 stretches the element <1 shrinks it */
+    /* Scale along x axis */
+    /* transform: scaleX(1); */
+    /* Scale along y axis */
+    /* transform: scaleY(2); */
+    /* Scale along z axis */
+    /* transform: scaleZ(); */
+
+    /* rotate */
+    /* transform: rotateX(60deg); */
+    /* transform: rotateY(100deg); */
+    /* transform: rotateZ(10deg); */
+
+    /* transform: rotateZ(10deg) translateY(100px) scaleX(2); */
+
+/* } */
+
+.sky {
+    width: 100%;
+    height: 40vh;
+}
+
+.image {    
+    position: absolute;
+}
+
+#img1 {
+    top: 30px;
+    left: 100px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img2 {
+    top: 70px;
+    left: 700px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img3 {
+    top: 200px;
+    left: 1000px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img4 {
+    top: 50px;
+    left: 1700px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img5 {
+    top: 150px;
+    left: 2200px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img6 {
+    top: 50px;
+    left: 2800px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img7 {
+    top: 90px;
+    left: 3300px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img8 {
+    top: 100px;
+    left: 3900px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img9 {
+    top: 50px;
+    left: 4400px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+#img10 {
+    top: 90px;
+    left: 5100px;
+    animation-name: cloud-move;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cloud-move {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(-2000px);
+    }
+}
+
+.wrapper img {
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+
+.wrapper .grass {
+    width: 100%;
+    height: 30vh;
+    background-color: green;
+}
+
+.wrapper .road {
+    width: 100%;
+    height: 30vh;
+    background-color: gray;
+    border-top: 20px solid rgb(185, 176, 176);
+    border-bottom: 20px solid rgb(185, 176, 176);
+    position: relative;
+}
+
+hr {
+    border-top: 20px dashed rgb(255, 255, 255);
+    outline: none;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 200%;
+    animation-name: move-road;
+    animation-duration: 7s;
+    animation-delay: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+}
+
+@keyframes move-road {
+    from {
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(-1000px);
+    }
+}
+
+.wrapper .road #mario{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+   
+}
+
+#mario img {
+    width: 100px;
+    height: 100px;
+}
+
+#mario {
+    animation-name: move;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(900px);
+    }
+}
+
+.wrapper .circle {
+    width: 100px;
+    padding: 50px 0;
+    line-height: 0;
+    margin: 60px auto;
+    background-color:bisque;
+    color: black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 1s;    /* To apply transition to background, we can do 
+                                    `transition: background 1s`*/
+}
+
+.circle:hover {
+    background-color: salmon;
+    transform: rotateZ(360deg);
+    transition-timing-function: ease-in-out;
+    
+}

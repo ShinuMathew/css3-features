@@ -3,26 +3,35 @@
     padding: 0;
     box-sizing: border-box;
     --nav-content-color : rgb(243, 237, 201); 
-    --nav-background-color-temp : #5d4954:
-    --default-font : 'Poppins', sans-serif
-    /* background-color: #5d4954; */
+    --nav-background-color-temp : #624d59:
+    --default-font : 'Poppins', sans-serif;
+    /* background-color: #624d59; */
+}
+
+body {
+
+    background-image: url(code.jpg);
+    /* filter: blur(8px);
+    -webkit-filter: blur(8px); */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .body-space {
     --default-font : 'Poppins', sans-serif;
     --default-color : rgb(243, 237, 201); 
-    --default-background-color : #5d495465;
-    background-image: url(bg-img.jpg);
+    --default-background-color : #5d4954;
+    background-color: rgba(22, 21, 21, 0.651);
     min-height: 100vh;
 }
 
 nav {
-    --nav-background-color : #5d495465;
+    --nav-background-color : #5d49547c;
     display: flex;
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: var(--nav-background-color);
+    /* background-color: var(--nav-background-color); */
     font-family: var(--default-font);
     z-index: 20;
 }
@@ -62,7 +71,8 @@ nav {
     color: var(--nav-content-color);
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 20px;    
+    font-size: 25px;   
+    display: flex; 
 }
 
 .logo h4 {
@@ -87,6 +97,35 @@ nav {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 15px;
+}
+
+.multi-level-link {
+    display: flex;
+    flex-direction: column;
+}
+
+.secondary-links {
+    position: absolute;
+    /* background-color: var(--nav-background-color); */
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    max-height: 30%;
+    padding: 10px;
+    top: 5%;
+    right: 13%;
+    text-align: center;
+    
+}
+
+ul li ul li {
+    margin-top: 10px ;
+    margin-bottom: 10px;
+    display: none;
+}
+
+ul li:hover ul li {
+    display: block;
 }
 
 /* ------------------- Responsiver hamburger ------------------- */
@@ -125,8 +164,8 @@ nav {
         /* For moving it below the nav bar:  */
         position: absolute;
         right: 0px;
-        height: 100%;
-        width: 60%;
+        height: 90%;
+        width: 50%;
         top: 8vh;
         background-color: var(--nav-background-color);
         display: block;
@@ -138,8 +177,26 @@ nav {
         transition: transform 0.5s ease-in;
     }
 
+    .secondary-links {
+        position: relative;
+        /* background-color: var(--nav-background-color); */
+        display: flex;
+        flex-direction: column;
+        width: 10%;
+        max-height: 30%;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        top: 0%;
+        left: 30%;
+        text-align: center;        
+    }
+
+    ul li:active ul li {
+        display: block;
+    }
+
     .nav-links li {
-        margin: 60px;
+        margin: 40px;
         text-align: center;     
         opacity: 0;   
     }

@@ -1,0 +1,81 @@
+body {
+    background: #333;
+}
+
+/* MyAnimation */
+.box {
+    background: white;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    animation-name: myanimation;    
+    animation-duration: 2s;
+    animation-iteration-count: infinite; /* No of iterations */
+    /* animation-delay: 2s; stops for 2 seconds after each iteration */
+    /* animation-direction: alternate; Moves in one direction and switches direction in next iteration */
+    animation-timing-function: linear;
+    /* 
+        linear : same speed
+        ease-in: starting slow ending fast
+        ease-out: starting fast ending slow 
+    */
+    animation-fill-mode: forwards; /* To stop the reseting */
+}
+
+/* Animation to keep the div fixed but changing shape */
+@keyframes myanimation {
+    0% {
+        background-color: white;
+        border-radius: 0 0 0 0;
+    }
+    25% {
+        background-color: rgb(245, 167, 167);
+        border-radius: 50% 0 0 0;
+    }
+    50% {
+        background-color: rgb(186, 248, 186);
+        border-radius: 50% 50% 0 0;
+    }
+    75% {
+        background-color: rgb(147, 147, 238);
+        border-radius: 50% 50% 50% 0;
+    }
+    100% {
+        background-color: white;
+        border-radius: 50% 50% 50% 50%;
+    }
+}
+
+/* Animation to moving the div around and changing shape */
+/* @keyframes myanimation {
+    0% {
+        background-color: white;
+        left: 0px;
+        top: 0px;
+        border-radius: 0 0 0 0;
+    }
+    25% {
+        background-color: red;
+        left: 300px;
+        top: 0px;
+        border-radius: 50% 0 0 0;
+    }
+    50% {
+        background-color: green;
+        left: 300px;
+        top: 300px;
+        border-radius: 50% 50% 0 0;
+    }
+    75% {
+        background-color: blue;
+        left: 0px;
+        top: 300px;
+        border-radius: 50% 50% 50% 0;
+    }
+    100% {
+        background-color: white;
+        left: 0px;
+        top: 0px;
+        border-radius: 50% 50% 50% 50%;
+    }
+} */
